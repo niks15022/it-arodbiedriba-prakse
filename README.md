@@ -1,2 +1,2 @@
 # it-arodbiedriba-prakse
-Mazs Supabase + JavaScript macinu projekts
+Mazs Supabase + JavaScript macibu projekts
