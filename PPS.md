@@ -1,15 +1,13 @@
-# Programmas prasību specifikācija (PPS)
+# Programmas Prasību Specifikācija (PPS)
 
 ## Programmas mērķis
-Šī projekta mērķis ir izveidot mazu, strādājošu web lietotni, kas pieslēdzas Supabase datubāzei un nolasa tur pieejamos ierakstus. Projekts demonstrē GitHub darba plūsmu (zari, commit, pull request), dokumentācijas veidošanu un pamata backend–frontend integrāciju. Tas paredzēts kā praktisks uzdevums IT prakses ietvaros.
+Šis projekts ir neliela mājas lapa, kas izmanto Supabase kā datu bāzi, lai nolasītu un parādītu vienkāršu datu sarakstu. Projekta mērķis ir apgūt datu nolasīšanu no Supabase un JavaScript lietotāja interfeisu veidošanu.
 
 ## Galvenie lietotāji
-- Prakses dalībnieks / students  
-- IT arodbiedrības pārstāvis  
-- Ikviens, kas vēlas apskatīt testa datus no Supabase datubāzes  
+- IT arodbiedrības biedri, kuri vēlas ātri apskatīt datus no datu bāzes.
+- Praktikanti, kas apgūst Supabase un GitHub izmantošanu.
 
-## Ko lietotājs var izdarīt
-- Apskatīt Supabase tabulā saglabātos ierakstus (piemēram, vārdu + aprakstu)  
-- Aplūkot datus tieši caur GitHub Pages vai lokāli atverot HTML failu  
-- Šī versija neļauj mainīt, pievienot vai dzēst datus  
-- Nākotnē varētu pievienot: datu rediģēšanu, lietotāju autorizāciju, filtru sistēmu, reāllaika datus  
+## Lietotāja iespējas
+- Lietotājs var apskatīt sarakstu ar ierakstiem, kas nolasa datus no Supabase datubāzes.
+- Šobrīd lietotājs tikai skatās datus, tos nevar rediģēt vai dzēst.
+- Nākotnē varētu pievienot datu rediģēšanas un jaunu ierakstu pievienošanas funkcionalitāti.
