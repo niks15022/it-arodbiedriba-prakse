@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Supabase Demo</title>
+</head>
+<body>
+  <h1>Supabase dati</h1>
+  <ul id="list"></ul>
+
+  <script type="module">
+    import { createClient } from "https://esm.sh/@supabase/supabase-js";
+
+    const supabase = createClient(
+      "TAVA_SUPABASE_URL",
+      "TAVA_ANON_KEY"
+    );
+
+    async function load() {
+      const { data, error } = await supabase
+        .from("members")
+        .select("*");
+
+      if (error) {
+        alert("Kļūda: " + error.message);
+        return;
+      }
+
+      const ul = document.getElementById("list");
+      data.forEach(row => {
+        const li = document.createElement("li");
+        li.textContent = `${row.name} – ${row.description}`;
+        ul.appendChild(li);
+      });
+    }
+
+    load();
+  </script>
+</body>
+</html>
