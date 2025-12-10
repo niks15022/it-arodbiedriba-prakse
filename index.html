@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Supabase Demo</title>
 </head>
 <body>
@@ -11,24 +11,22 @@
   <script type="module">
     import { createClient } from "https://esm.sh/@supabase/supabase-js";
 
+    // 🔹 Šeit ieliec savu Supabase URL un ANON KEY
     const supabase = createClient(
-      "TAVA_SUPABASE_URL",  // Piemēram, https://abc123.supabase.co
-      "TAVA_ANON_KEY"       // Supabase anon public key
+      "TAVA_SUPABASE_URL",   // piem.: https://abc123.supabase.co
+      "TAVA_ANON_KEY"        // public anon key
     );
 
     async function load() {
-      console.log("Ielādējam datus no Supabase...");
       const { data, error } = await supabase
-        .from("members")  // vai kā saucas tava tabula Supabase
+        .from("members")   // Tabulas nosaukums
         .select("*");
 
       if (error) {
-        console.error("Kļūda no Supabase:", error);
+        console.error(error);
         alert("Neizdevās ielādēt datus!");
         return;
       }
-
-      console.log("Dati no Supabase:", data);
 
       const ul = document.getElementById("list");
       data.forEach(row => {
