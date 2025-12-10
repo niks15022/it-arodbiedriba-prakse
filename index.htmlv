@@ -11,18 +11,20 @@
   <script type="module">
     import { createClient } from "https://esm.sh/@supabase/supabase-js";
 
+    // 🔹 Šeit ieliec savu Supabase URL un ANON KEY
     const supabase = createClient(
-      "TAVA_SUPABASE_URL",
-      "TAVA_ANON_KEY"
+      "TAVA_SUPABASE_URL",   // piem.: https://abc123.supabase.co
+      "TAVA_ANON_KEY"        // public anon key
     );
 
     async function load() {
       const { data, error } = await supabase
-        .from("members")
+        .from("members")   // Tabulas nosaukums
         .select("*");
 
       if (error) {
-        alert("Kļūda: " + error.message);
+        console.error(error);
+        alert("Neizdevās ielādēt datus!");
         return;
       }
 
@@ -38,3 +40,6 @@
   </script>
 </body>
 </html>
+
+
+    
